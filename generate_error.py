@@ -47,7 +47,7 @@ def load_data(file_path):
     for index in range(len(frequency)):
         k = frequency[index]
         if k > 0:
-            chracters.append(chr(index+0x4e00))
+            characters.append(chr(index+0x4e00))
             freq_val.append(k)
     freq_val.sort(reverse=True)
     threshold = freq_val[1000]
@@ -193,7 +193,7 @@ def generate_set(characters):
 
 pinyin2chs = {}
 similar_pinyin = {}
-tokenizer = tokenization.FullTokenizer("./chinese_L-12_H-768_A-12/vocab.txt")
+tokenizer = tokenization.FullTokenizer("./vocab.txt")
 
 def main():
     global pinyin2chs,similar_pinyin
